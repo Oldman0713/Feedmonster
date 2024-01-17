@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicaClothV2", "MagicaClot
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Treeverse.Shader.ScriptExtenstion", "Treeverse.Shader.ScriptExtenstion.csproj", "{7c374a1a-e075-3eb8-9db9-19b64e309bbc}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{38548b3f-6472-9768-badd-4e71d9e095f4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Treeverse.Shader.Runtime", "Treeverse.Shader.Runtime.csproj", "{0b5110b7-2b08-f5f5-eb0b-755374f5035e}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.RenderPipelines.Core.ShaderLibrary", "Unity.RenderPipelines.Core.ShaderLibrary.csproj", "{1be6d46f-f55b-de13-dfeb-8d995c0ab570}"
@@ -44,8 +42,6 @@ Global
 		{70fff7c7-2334-d4a7-faea-0ef53e5c2c36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7c374a1a-e075-3eb8-9db9-19b64e309bbc}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7c374a1a-e075-3eb8-9db9-19b64e309bbc}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38548b3f-6472-9768-badd-4e71d9e095f4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38548b3f-6472-9768-badd-4e71d9e095f4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0b5110b7-2b08-f5f5-eb0b-755374f5035e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0b5110b7-2b08-f5f5-eb0b-755374f5035e}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1be6d46f-f55b-de13-dfeb-8d995c0ab570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

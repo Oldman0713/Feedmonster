@@ -36,17 +36,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Anim\AniController.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerBase.cs" />
-     <Compile Include="Assets\Scripts\Player\MoveBase.cs" />
      <Compile Include="Assets\xScript\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\AI\AIBase.cs" />
-     <Compile Include="Assets\Scripts\Skill\Bullet.cs" />
-     <Compile Include="Assets\Scripts\AI\AIData.cs" />
-     <Compile Include="Assets\Scripts\Game.cs" />
      <Compile Include="Assets\xScript\JoystickDirection.cs" />
      <Compile Include="Assets\InputMaster.cs" />
-     <Compile Include="Assets\Scripts\Skill\SkillData.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.21f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
