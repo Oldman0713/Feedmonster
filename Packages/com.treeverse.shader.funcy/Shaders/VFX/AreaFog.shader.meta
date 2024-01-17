@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: f461279a27a483a458b1d1b3cc827c79
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: '{"shaderPath":"Treeverse/VFX/AreaFog","attributes":[{"isBaseTexture":false,"channel":64,"index":0,"range":{"x":0.0,"y":1.0},"propertyTarget":"_MainTex","mask":1},{"isBaseTexture":false,"channel":64,"index":2,"range":{"x":0.0,"y":1.0},"propertyTarget":"_NormalMap","mask":2}]}'
+  assetBundleName: 
+  assetBundleVariant: 

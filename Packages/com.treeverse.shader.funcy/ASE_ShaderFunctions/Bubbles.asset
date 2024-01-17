@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: Bubbles
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor\n// Available at the Unity
+    Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=18104\n-1433;176;1440;849;1083.258;363.3543;1.060379;True;False\nNode;AmplifyShaderEditor.FunctionInput;1;-384,-128;Inherit;False;uv;2;0;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;2;-65.89541,-132.2975;Inherit;True;2;0;FLOAT2;0,0;False;1;FLOAT2;0.5,0.5;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;9;-384,256;Inherit;False;speed;1;2;False;1;0;FLOAT;80;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;3;-640,-128;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.CustomExpressionNode;8;256,64;Inherit;False;               
+    float mSum = 0.@$                                for (float i = -1.0@ i <= 0.0@
+    i += fstep)$                {$                    float2 iuv = uv + float2(cos(uv.y
+    * 2. + i * 20. + _Time.y * .5) * .1, 0.)@$                    float size = (i
+    * .15 + 0.2) * sizeFactor + 10.@$$                    float speed = INIT_SPEED
+    + i * 5.@$                    float timeOfst = i * 10.@$                    float
+    blur = .3 + i * .25@$                    float time = _Time.y@$$                   
+    iuv = iuv + float2(i * .1, 0.)@$                    float2 ruv = iuv * size +
+    .05@$                    float2 id = ceil(ruv) + speed@$$                   
+    float t = (time + timeOfst) * speed@$$                    ruv.y -= t * (frac(sin(dot(id.xx,
+    float2(12.9898, 78.233))) * 43758.5453) * 0.5 + 0.5) * 0.1@$                   
+    float2 guv = frac(ruv) - 0.5@$$                    ruv = ceil(ruv)@$                   
+    float g = length(guv)@$$                    float v = frac(sin(dot(ruv, float2(12.9898,
+    78.233))) * 43758.5453) * 0.5@$                    v *= step(v, clamp(0.28/*Force*/,
+    .1, .3))@$$                    float m = smoothstep(v, v - blur, g)@$$                   
+    v *= .85@$                    m -= smoothstep(v, v - .1, g)@$$                   
+    g = length(guv - float2(v * .35, v * .35))@$                    float hlSize
+    = v * .75@$                    m += smoothstep(hlSize, 0., g) * .75@$                   
+    $                    mSum += m * abs(i)@$                }$$return mSum@;1;False;4;True;uv;FLOAT2;0,0;In;;Inherit;False;True;INIT_SPEED;FLOAT;0;In;;Inherit;False;True;fstep;FLOAT;0;In;;Inherit;False;True;sizeFactor;FLOAT;1;In;;Inherit;False;Bubbles;True;False;0;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;7;-379.7585,1.060379;Inherit;False;2;0;FLOAT;0.1;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;6;-514.1207,117.7021;Inherit;False;Amount;1;1;False;1;0;FLOAT;10;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMaxOpNode;10;-364.3209,124.42;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;640,0;Inherit;True;True;-1;Output;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;1;0;3;0\nWireConnection;2;0;1;0\nWireConnection;8;0;2;0\nWireConnection;8;1;9;0\nWireConnection;8;2;7;0\nWireConnection;7;1;10;0\nWireConnection;10;0;6;0\nWireConnection;0;0;8;0\nASEEND*/\n//CHKSM=30345441E1225EEA0CD423E3B2CFB87EF1AFC409"
+  m_functionName: 
+  m_description: 
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 3
+  m_customNodeCategory: 
+  m_previewPosition: 0
+  m_hidden: 0

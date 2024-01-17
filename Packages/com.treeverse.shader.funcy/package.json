@@ -1,0 +1,28 @@
+{
+  "name": "com.treeverse.shader.funcy",
+  "description": "\u9019\u662f Funcy \u7684 Shader Package.",
+  "version": "1.0.0",
+  "keywords": [
+    "key",
+    "words",
+    "used",
+    "for",
+    "package",
+    "search"
+  ],
+  "unity": "2021.3",
+  "displayName": "_Treeverse Shader Package",
+  "dependencies": {
+  },
+  "category": "FuncyLi",
+  "author": {
+    "name": "FuncyLi",
+    "email": "funcy@endlessclouds.xyz",
+    "url": "https://www.treeverse.net/"
+  },
+  "repository": {
+    "type": "git",
+    "directory": "com.treeverse.shader.funcy"
+  },
+  "type": "shaders"
+}

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4e0e2cc1663e5e04e8a7d15086159192
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - srcMesh: {instanceID: 0}
+  - furMesh: {instanceID: 0}
+  - mf: {instanceID: 0}
+  - smr: {instanceID: 0}
+  - furCompute: {fileID: 7200000, guid: df5254f263e1ca2478bedbe409a5e536, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

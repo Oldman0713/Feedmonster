@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 19cd95323e36a8547a399ede390e4e43
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _Splat3: {fileID: 2800000, guid: 954e46e16660dd54f8096593cb37b2a3, type: 3}
+  - _Splat1: {fileID: 2800000, guid: a601e40aea98a0748911eabddadf1787, type: 3}
+  - _Splat2: {fileID: 2800000, guid: b7115849e71d5294da137726ce5a8a08, type: 3}
+  - _Normal2: {fileID: 2800000, guid: a9836387f720c374f9e21e1a4672f7c6, type: 3}
+  - _Splat0: {fileID: 2800000, guid: 764331310c5ba434d8e1719eb44ac696, type: 3}
+  - _Normal3: {fileID: 2800000, guid: 572d4920073265042a0dc9cac25b9f24, type: 3}
+  - _SplatBase: {fileID: 2800000, guid: 164732ecebdde9b47aa1687f107ed779, type: 3}
+  - _Normal0: {fileID: 2800000, guid: fe7e3a61bdd0cb643a933ead35f07cc0, type: 3}
+  - _NormalBase: {fileID: 2800000, guid: 43b17829d3888c641a08f48bb5f788d1, type: 3}
+  - _Normal1: {fileID: 2800000, guid: b6c1646974877914dabd9204db83a317, type: 3}
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: '{"shaderPath":"Treeverse/HeightBlend","attributes":[{"isBaseTexture":false,"channel":64,"index":1,"range":{"x":0.0,"y":1.0},"propertyTarget":"_Splat1","mask":2},{"isBaseTexture":false,"channel":64,"index":2,"range":{"x":0.0,"y":1.0},"propertyTarget":"_Splat2","mask":2},{"isBaseTexture":false,"channel":64,"index":3,"range":{"x":0.0,"y":1.0},"propertyTarget":"_Splat3","mask":2},{"isBaseTexture":false,"channel":64,"index":0,"range":{"x":0.0,"y":1.0},"propertyTarget":"_Splat0","mask":2},{"isBaseTexture":false,"channel":128,"index":0,"range":{"x":0.0,"y":1.0},"propertyTarget":"_CutoutMap","mask":6},{"isBaseTexture":false,"channel":128,"index":2,"range":{"x":0.0,"y":1.0},"propertyTarget":"_SplatBase","mask":2}]}'
+  assetBundleName: 
+  assetBundleVariant: 

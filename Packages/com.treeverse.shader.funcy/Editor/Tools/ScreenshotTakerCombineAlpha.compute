@@ -1,0 +1,17 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWTexture2D<float4> Result;
+RWTexture2D<float4> Alpha;
+[numthreads(8, 8, 1)]
+void CSMain(uint3 id: SV_DispatchThreadID)
+{
+    // TODO: insert actual code here!
+    float hdr = max(max(Result[id.xy].r, Result[id.xy].g), Result[id.xy].b);
+    float alpha = Alpha[id.xy].a;
+    float3 transparentArea = Result[id.xy].rgb / hdr;
+    float3 opaqueArea = Result[id.xy].rgb;
+    Result[id.xy] = float4(lerp(opaqueArea, transparentArea, alpha < 1.0), max(hdr, Alpha[id.xy].a));
+}

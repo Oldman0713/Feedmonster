@@ -1,0 +1,25 @@
+{
+    "name": "Treeverse.Shader.Editor",
+    "rootNamespace": "Treeverse.Shader.Editor",
+    "references": [
+        "GUID:df380645f10b7bc4b97d4f5eb6303d95",
+        "GUID:3eae0364be2026648bf74846acb8a731",
+        "GUID:be0903cd8e1546f498710afdc59db5eb",
+        "GUID:15fc0a57446b3144c949da3e2b9737a9",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:2a37dcea0767d4b49854df20ca75b902",
+        "GUID:c579267770062bf448e75eb160330b7f",
+        "GUID:70e5f2cdb5317044b801e6b567aef2fe"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

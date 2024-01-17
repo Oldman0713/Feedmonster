@@ -1,0 +1,105 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel GemFurMesh
+#pragma kernel TriangleCulling
+
+StructuredBuffer<float3> verticeBfr;
+StructuredBuffer<float3> normalBfr;
+StructuredBuffer<float4> tangentBfr;
+StructuredBuffer<int> triangleBfr;
+StructuredBuffer<float4> uv0Bfr;
+StructuredBuffer<float4> uv1Bfr;
+StructuredBuffer<float4> uv2Bfr;
+StructuredBuffer<float4> uv3Bfr;
+StructuredBuffer<float4> colorBfr;
+
+RWStructuredBuffer<float3> out_verticeBfr;
+RWStructuredBuffer<float3> out_normalBfr;
+RWStructuredBuffer<float4> out_tangentBfr;
+RWStructuredBuffer<int> out_triangleBfr;
+RWStructuredBuffer<float4> out_uv0Bfr;
+RWStructuredBuffer<float4> out_uv1Bfr;
+RWStructuredBuffer<float4> out_uv2Bfr;
+RWStructuredBuffer<float4> out_uv3Bfr;
+RWStructuredBuffer<float4> out_colorBfr;
+
+Texture2D<float4> threshodCurveMap;
+
+uint origVertexCount;
+uint origTriangleCount;
+uint furLayerNum;
+float height;
+float2 tilingPerMesh;
+
+float4 isfur;
+
+bool triangleCull;
+
+float map(float s, float from1, float from2, float to1, float to2)
+{
+    return to1 + (s - from1) * (to2 - to1) / (from2 - from1);
+}
+
+[numthreads(1024, 1, 1)]
+void GemFurMesh(uint3 id: SV_DispatchThreadID)
+{
+    uint index = id.x;
+    uint layerNum = max(1, furLayerNum);
+    if (index < origVertexCount * layerNum)
+    {
+        int currentLayer = (index / origVertexCount);
+        int bfrIndex = index % origVertexCount;
+
+        out_verticeBfr[index] = verticeBfr[bfrIndex];
+        out_normalBfr[index] = normalBfr[bfrIndex];
+        out_tangentBfr[index] = tangentBfr[bfrIndex];
+        out_uv0Bfr[index] = uv0Bfr[bfrIndex] * float4(tilingPerMesh, 1.0, 1.0);
+        
+        out_uv2Bfr[index] = uv2Bfr[bfrIndex];
+        out_uv3Bfr[index] = uv3Bfr[bfrIndex];
+        
+        
+        float isFur = 1.0;
+        
+        if(triangleCull)
+        {
+            float isFur_X = lerp(0.0, step(0.0001, out_uv2Bfr[index].x), isfur.x);
+            float isFur_Y = lerp(0.0, step(0.0001, out_uv2Bfr[index].y), isfur.y);
+            float isFur_Z = lerp(0.0, step(0.0001, out_uv2Bfr[index].z), isfur.z);
+            float isFur_W = lerp(0.0, step(0.0001, out_uv2Bfr[index].w), isfur.w);
+            
+            isFur = max(max(isFur_X, isFur_Y), max(isFur_Z, isFur_W));
+        }
+        
+        float currentValue = map(currentLayer, 0, layerNum - 1, 0, height) * isFur + 1.0;
+        float4 prop = float4(currentValue, 1.0, 1.0, 1.0);
+        float normalizeCurveValue = (currentValue - 1) / height;
+        
+        out_colorBfr[index] = float4(currentValue, threshodCurveMap[uint2(currentLayer, 0)].y, currentLayer, layerNum);
+    }
+    
+    int currenTriLayer = (index / origTriangleCount);
+    out_triangleBfr[index] = triangleBfr[index % origTriangleCount] + origVertexCount * currenTriLayer;
+}
+
+[numthreads(1024, 1, 1)]
+void TriangleCulling(uint3 id: SV_DispatchThreadID)
+{
+    int index = id.x;
+    
+    int triIndex_1 = index * 3;
+    int triIndex_2 = triIndex_1 + 1;
+    int triIndex_3 = triIndex_1 + 2;
+    
+    int vertIndex_1 = out_triangleBfr[triIndex_1];
+    int vertIndex_2 = out_triangleBfr[triIndex_2];
+    int vertIndex_3 = out_triangleBfr[triIndex_3];
+    
+    float conditionFur = (out_colorBfr[vertIndex_1].r + out_colorBfr[vertIndex_2].r + out_colorBfr[vertIndex_3].r) / 3.0;
+    
+    if(out_colorBfr[vertIndex_1].b > 0 && conditionFur <= 1.0)
+    {
+        out_triangleBfr[triIndex_1] = -1;
+        out_triangleBfr[triIndex_2] = -1;
+        out_triangleBfr[triIndex_3] = -1;
+    }
+}

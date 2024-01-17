@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DNA
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor\n// Available at the Unity
+    Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=18909\n-1441;189;1440;774;1559.235;236.6865;1;True;False\nNode;AmplifyShaderEditor.SimpleTimeNode;5;-694.5874,76.92133;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;2;-896,-128;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionInput;3;-640,-128;Inherit;False;uv;2;0;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;6;-512,-128;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.DynamicAppendNode;7;-384,-128;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;4;-512,0;Inherit;False;time;1;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.CustomExpressionNode;1;-256,-128;Inherit;False;               
+    uv = (uv - 0.5) * 2.0@                $                uv *= 5.0@$                               
+    $                float angle = 0.3@$                                               
+    $                uv.x -= TIME * 0.5@$                                $               
+    float pixelSize = blur@$                float2 baseUV = uv@$                uv.x
+    = frac(uv.x)@$                float lineIndex = floor(baseUV.x)@$               
+    float dnaTimeIndex = lineIndex * SIN_DENSITY + TIME@$                float sinDna
+    = sin(dnaTimeIndex) * 2.0@$                float cosDna = cos(dnaTimeIndex) *
+    2.0@$                $                //draw straight line$                float
+    lineSDF = abs(uv.x - 0.5)@$                float lineMask = smoothstep(pixelSize
+    * 2.0, 0.0, lineSDF)@$                $                //cut upper part of the
+    lines$                float sinCutLineUp = abs(sinDna)@$                float
+    sinCutMaskUp = smoothstep(sinCutLineUp + pixelSize, sinCutLineUp - pixelSize,
+    uv.y)@$                $                //cut lower part of the lines$               
+    float sinCutLineDown = -abs(sinDna)@$                float sinCutMaskDown = smoothstep(sinCutLineDown
+    - pixelSize, sinCutLineDown + pixelSize, uv.y)@$                $               
+    //Create first side of dna circles$                float2 circle1 = circle(uv,
+    pixelSize, sinDna, cosDna, 1.0)@$                $                //Second side
+    of dna circles$                float2 circle2 = circle(uv, pixelSize, sinDna,
+    cosDna, -1.0)@$                $                //Calculating line gradient for
+    depth effect$                //Thanks to tb for this 3D effect idea$               
+    float lineGradient = linearstep(sinCutLineUp, sinCutLineDown, uv.y)@$               
+    if (sin(lineIndex * SIN_DENSITY + TIME) > 0.0) lineGradient = 1.0 - lineGradient@$               
+    lineGradient = lerp(circle1.y, circle2.y, lineGradient)@$                $               
+    //rendering line$                float helis = 0.0@$                $               
+    //rendering circles$                if (circle1.y < circle2.y)$               
+    {$                    helis = lerp(helis, circle1.y, circle1.x)@$                   
+    helis = lerp(helis, lineGradient, lineMask * sinCutMaskUp * sinCutMaskDown)@$                   
+    helis = lerp(helis, circle2.y, circle2.x)@$                }$               
+    else$                {$                    helis = lerp(helis, circle2.y, circle2.x)@$                   
+    helis = lerp(helis, lineGradient, lineMask * sinCutMaskUp * sinCutMaskDown)@$                   
+    helis = lerp(helis, circle1.y, circle1.x)@$                }$               
+    return helis@;1;Create;3;True;uv;FLOAT2;0,0;In;;Inherit;False;True;TIME;FLOAT;0;In;;Inherit;False;True;blur;FLOAT;0.01;In;;Inherit;False;GetDNA;True;False;0;;False;3;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;0.01;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;8;-491.6898,203.9603;Inherit;False;blur;1;2;False;1;0;FLOAT;0.01;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;0,-128;Inherit;False;True;-1;Output;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;3;0;2;0\nWireConnection;6;0;3;0\nWireConnection;7;0;6;1\nWireConnection;7;1;6;0\nWireConnection;4;0;5;0\nWireConnection;1;0;7;0\nWireConnection;1;1;4;0\nWireConnection;1;2;8;0\nWireConnection;0;0;1;0\nASEEND*/\n//CHKSM=B09E361C1827DA3679DDD461E6733C62DC7921BB"
+  m_functionName: 
+  m_description: 
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 1
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives:
+    - {fileID: 0}
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems:
+    - LineType: 0
+      LineValue: 
+      GUIDToggle: 1
+      GUIDValue: b595734f2f9dad842ab4b59327582269
+      Origin: 2
+  m_nodeCategory: 3
+  m_customNodeCategory: 
+  m_previewPosition: 0
+  m_hidden: 0

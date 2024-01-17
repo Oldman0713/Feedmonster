@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: Thunder
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor\n// Available at the Unity
+    Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=18912\n-1418;228;1374;751;1441.007;547.6387;1;True;False\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;2;-896,-128;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionInput;4;-512,0;Inherit;False;time;1;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;3;-512,-128;Inherit;False;uv;2;0;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleTimeNode;5;-896,0;Inherit;False;1;0;FLOAT;0.01;False;1;FLOAT;0\nNode;AmplifyShaderEditor.CustomExpressionNode;1;-256,-128;Inherit;False;half3
+    fragColor = 0.0.xxx@$                //uv.x += sin(time)@$                $               
+    float bg = (cos(uv.x * 3.14159 * 2.0) + sin((uv.y) * 3.14159)) * 0.15@$               
+    $                half2 p = uv * 2.0 - 1.0@$                p *= 15.0@$               
+    $                half2 sfunc = half2(p.x, p.y + 5.0 * sin(uv.x * 10.0 - time
+    * 20.0) + 2.0 * sin(uv.x * 25.0 + time * 40.0))@$$                $               
+    sfunc.y = p.y + rand(half2(time, 0.0)) * sin(uv.x * rand2(half2(time, 1.0)))$               
+    + rand(half2(time, 2.0)) * sin(uv.x * rand2(half2(time, 2.0)))@$               
+    sfunc.y += p.y + rand(half2(time, 1.0)) * sin(uv.x * rand2(half2(time, 3.0)))$               
+    + rand(half2(time, 4.0)) * sin(uv.x * rand2(half2(time, 4.0)))@$               
+    sfunc.y += p.y + rand(half2(time, 2.0)) * sin(uv.x * rand(half2(time, 5.0)))$               
+    + rand(half2(time, 6.0)) * sin(uv.x * rand2(half2(time, 6.0)))@$               
+    sfunc.y += p.y + rand(half2(time, 3.0)) * sin(uv.x * rand(half2(time, 7.0)))$               
+    + rand(half2(time, 8.0)) * sin(uv.x * rand2(half2(time, 8.0)))@$               
+    sfunc.y /= 0.1@ // Thickness fix$                half3 c = half3(abs(sfunc.y).xxx)@$               
+    c = pow(c, half3(-0.7.xxx))@$                c *= half3(0.3, 0.85, 1.0)@$               
+    fragColor = c@$                $                sfunc.y = p.y + rand(half2(time,
+    0.1)) * sin(uv.x * rand2(half2(time, 1.1)))$                + rand(half2(time,
+    2.1)) * sin(uv.x * rand2(half2(time, 2.1)))@$                sfunc.y += p.y +
+    rand(half2(time, 1.1)) * sin(uv.x * rand2(half2(time, 3.1)))$               
+    + rand(half2(time, 4.1)) * sin(uv.x * rand2(half2(time, 4.1)))@$               
+    sfunc.y += p.y + rand(half2(time, 2.1)) * sin(uv.x * rand(half2(time, 5.1)))$               
+    + rand(half2(time, 6.1)) * sin(uv.x * rand2(half2(time, 6.1)))@$               
+    sfunc.y += p.y + rand(half2(time, 3.1)) * sin(uv.x * rand(half2(time, 7.1)))$               
+    + rand(half2(time, 8.1)) * sin(uv.x * rand2(half2(time, 8.1)))@$               
+    sfunc.y /= 0.5@ // Thickness fix$                c = half3(abs(sfunc.y).xxx)@$               
+    c = pow(c, half3(-0.7.xxx))@$                c *= half3(0.3, 0.85, 1.0)@$               
+    fragColor += c@$                $                sfunc.y = p.y + rand(half2(time,
+    0.0)) * sin(uv.x * rand2(half2(time, 1.4)))$                + rand(half2(time,
+    2.4)) * sin(uv.x * rand2(half2(time, 2.0)))@$                sfunc.y += p.y +
+    rand(half2(time, 1.0)) * sin(uv.x * rand2(half2(time, 3.4)))$               
+    + rand(half2(time, 4.4)) * sin(uv.x * rand2(half2(time, 4.0)))@$               
+    sfunc.y += p.y + rand(half2(time, 2.0)) * sin(uv.x * rand(half2(time, 5.4)))$               
+    + rand(half2(time, 6.4)) * sin(uv.x * rand2(half2(time, 6.0)))@$               
+    sfunc.y += p.y + rand(half2(time, 3.0)) * sin(uv.x * rand(half2(time, 7.4)))$               
+    + rand(half2(time, 8.4)) * sin(uv.x * rand2(half2(time, 8.0)))@$               
+    sfunc.y /= 1.0@ // Thickness fix$                c = half3(abs(sfunc.y).xxx)@$               
+    c = pow(c, half3(-0.7.xxx))@$                c *= half3(0.3, 0.85, 1.0)@$               
+    fragColor += c@$return fragColor@;3;Create;2;True;uv;FLOAT2;0,0;In;;Inherit;False;True;time;FLOAT;0;In;;Inherit;False;GetThunder;True;False;0;;False;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;0;0,-128;Inherit;False;True;-1;Output;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;4;0;5;0\nWireConnection;3;0;2;0\nWireConnection;1;0;3;0\nWireConnection;1;1;4;0\nWireConnection;0;0;1;0\nASEEND*/\n//CHKSM=B4EA93808B0B40A94F7342EDD10BC01132889BC6"
+  m_functionName: 
+  m_description: 
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 1
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives:
+    - {fileID: 0}
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems:
+    - LineType: 0
+      LineValue: 
+      GUIDToggle: 1
+      GUIDValue: b595734f2f9dad842ab4b59327582269
+      Origin: 2
+  m_nodeCategory: 3
+  m_customNodeCategory: 
+  m_previewPosition: 0
+  m_hidden: 0

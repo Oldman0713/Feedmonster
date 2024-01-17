@@ -1,0 +1,423 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9165973934037189889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a820890250d764a870938719a2be22, type: 3}
+  m_Name: Refraction Buffer
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    Event: 500
+    filterSettings:
+      RenderObjectType: 1
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 1073741824
+      PassNames:
+      - SRPDefaultUnlit
+      - UniversalForward
+      - UniversalForwardOnly
+    filterMode: 1
+    limitQueueRange: {x: 2501, y: 5000}
+    dstType: 1
+    dstName: _RefractionBuffer
+    dstFormat: 2
+    writeDefaultDepth: 0
+    downSample: 10
+    sceneViewOnly: 0
+    gameViewOnly: 0
+--- !u!114 &-5135333682524522103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 051ead87900104241a5f9801caa64939, type: 3}
+  m_Name: GlobalProperties
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  settings:
+    properties:
+    - name: _aces_curve_a
+      type: 2
+      floatValue: 2.5
+      vectorValue: {x: 0, y: 0, z: 0, w: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+    - name: _aces_curve_b
+      type: 2
+      floatValue: 0.4
+      vectorValue: {x: 0, y: 0, z: 0, w: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+    - name: _aces_curve_c
+      type: 2
+      floatValue: 2.2
+      vectorValue: {x: 0, y: 0, z: 0, w: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+    - name: _aces_curve_d
+      type: 2
+      floatValue: 0.6
+      vectorValue: {x: 0, y: 0, z: 0, w: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+    - name: _aces_curve_e
+      type: 2
+      floatValue: 0.6
+      vectorValue: {x: 0, y: 0, z: 0, w: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &-4042443475907542619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804bf49869d3b4315a850958d8530433, type: 3}
+  m_Name: LinearToSRGB
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  settings:
+    Event: 1000
+    blitMaterial: {fileID: 2100000, guid: 0d5c915f331eab149a2d1e4d74646f41, type: 2}
+    blitMaterialPassIndex: 0
+    setInverseViewMatrix: 0
+    requireDepthNormals: 0
+    srcType: 0
+    srcTextureId: _CameraColorTexture
+    dstType: 0
+    dstTextureId: _BlitPassTexture
+    overrideGraphicsFormat: 0
+    graphicsFormat: 48
+    filterMode: 1
+    downSample: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de640fe3d0db1804a85f9fc8f5cadab6, type: 3}
+  m_Name: RendererData_DepthCookie
+  m_EditorClassIdentifier: 
+  debugShaders:
+    debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7, type: 3}
+  m_RendererFeatures:
+  - {fileID: 3996014716356993996}
+  - {fileID: -9165973934037189889}
+  - {fileID: 5294063240370279263}
+  - {fileID: 9014217560336422004}
+  - {fileID: 9036321208306770855}
+  - {fileID: 1171058897219199771}
+  - {fileID: -5135333682524522103}
+  - {fileID: 5078935704700611110}
+  - {fileID: 8082592574343285873}
+  - {fileID: 5872479133164838117}
+  - {fileID: -4042443475907542619}
+  m_RendererFeatureMap: cc23b17536b27437ff3a393945ebcb805f53b9cc774a784974d4f09b1cef187da72374314376677d1ba3cfcbdc6f401089f9065239a1bbb8266aba331d017c46710cf1791f232b70e51c2f6ba83c7f51a581ef91135be6c7
+  m_UseNativeRenderPass: 0
+  postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
+  xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
+  shaders:
+    blitPS: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
+    copyDepthPS: {fileID: 4800000, guid: d6dae50ee9e1bfa4db75f19f99355220, type: 3}
+    screenSpaceShadowPS: {fileID: 0}
+    samplingPS: {fileID: 4800000, guid: 04c410c9937594faa893a11dceb85f7e, type: 3}
+    stencilDeferredPS: {fileID: 4800000, guid: e9155b26e1bc55942a41e518703fe304, type: 3}
+    fallbackErrorPS: {fileID: 4800000, guid: e6e9a19c3678ded42a3bc431ebef7dbd, type: 3}
+    materialErrorPS: {fileID: 4800000, guid: 5fd9a8feb75a4b5894c241777f519d4e, type: 3}
+    coreBlitPS: {fileID: 4800000, guid: 93446b5c5339d4f00b85c159e1159b7c, type: 3}
+    coreBlitColorAndDepthPS: {fileID: 4800000, guid: d104b2fc1ca6445babb8e90b0758136b, type: 3}
+    cameraMotionVector: {fileID: 4800000, guid: c56b7e0d4c7cb484e959caeeedae9bbf, type: 3}
+    objectMotionVector: {fileID: 4800000, guid: 7b3ede40266cd49a395def176e1bc486, type: 3}
+  m_AssetVersion: 1
+  m_OpaqueLayerMask:
+    serializedVersion: 2
+    m_Bits: 2147483647
+  m_TransparentLayerMask:
+    serializedVersion: 2
+    m_Bits: 1015
+  m_DefaultStencilState:
+    overrideStencilState: 0
+    stencilReference: 9
+    stencilCompareFunction: 3
+    passOperation: 2
+    failOperation: 0
+    zFailOperation: 0
+  m_ShadowTransparentReceive: 1
+  m_RenderingMode: 0
+  m_DepthPrimingMode: 0
+  m_AccurateGbufferNormals: 0
+  m_ClusteredRendering: 0
+  m_TileSize: 32
+  m_IntermediateTextureMode: 1
+--- !u!114 &1171058897219199771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaad5c85f2c809042933d794a0ae6d8c, type: 3}
+  m_Name: MobileSSPRRendererFeature
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  Settings:
+    ShouldRenderSSPR: 1
+    horizontalReflectionPlaneHeightWS: -0.93
+    heightFixerData:
+    - {fileID: 11400000, guid: 7769176b9ef75814bb130988afa37ea2, type: 2}
+    fadeOutScreenBorderWidthVerticle: 0.25
+    fadeOutScreenBorderWidthHorizontal: 0.35
+    screenLRStretchIntensity: 4
+    screenLRStretchThreshold: 0.7
+    tintColor: {r: 1, g: 1, b: 1, a: 1}
+    RT_height: 1024
+    UseHDR: 1
+    ApplyFillHoleFix: 1
+    ShouldRemoveFlickerFinalControl: 1
+    EnablePerPlatformAutoSafeGuard: 1
+    SSPR_computeShader: {fileID: 7200000, guid: 07c79ca1bcd69d84cafeb19534a40fc3, type: 3}
+--- !u!114 &3996014716356993996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a820890250d764a870938719a2be22, type: 3}
+  m_Name: UniversalForwardOutline
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    Event: 250
+    filterSettings:
+      RenderObjectType: 2
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 2147483647
+      PassNames:
+      - UniversalForwardOutline
+    filterMode: 0
+    limitQueueRange: {x: 0, y: 5000}
+    dstType: 0
+    dstName: _CustomPassBuffer
+    dstFormat: 2
+    writeDefaultDepth: 1
+    downSample: 1
+    sceneViewOnly: 0
+    gameViewOnly: 0
+--- !u!114 &5078935704700611110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a820890250d764a870938719a2be22, type: 3}
+  m_Name: DepthCookieTarget
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    Event: 400
+    filterSettings:
+      RenderObjectType: 0
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 2147483647
+      PassNames:
+      - DepthCookieOpaqueOutline
+      - DepthCookieOpaque
+    filterMode: 0
+    limitQueueRange: {x: 0, y: 5000}
+    dstType: 1
+    dstName: _DepthCookieTarget
+    dstFormat: 2
+    writeDefaultDepth: 1
+    downSample: 1
+    sceneViewOnly: 0
+    gameViewOnly: 0
+--- !u!114 &5294063240370279263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a820890250d764a870938719a2be22, type: 3}
+  m_Name: UniversalForwardOnlyAfterOpaque
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    Event: 450
+    filterSettings:
+      RenderObjectType: 2
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 2147483647
+      PassNames:
+      - UniversalForwardOnlyAfterOpaque
+    filterMode: 0
+    limitQueueRange: {x: 2000, y: 2500}
+    dstType: 0
+    dstName: _CustomPassBuffer
+    dstFormat: 2
+    writeDefaultDepth: 1
+    downSample: 1
+    sceneViewOnly: 0
+    gameViewOnly: 0
+--- !u!114 &5872479133164838117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804bf49869d3b4315a850958d8530433, type: 3}
+  m_Name: DepthCookiePost
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    Event: 500
+    blitMaterial: {fileID: 2100000, guid: 0c06292237cc1b64e9f059737d53e2e8, type: 2}
+    blitMaterialPassIndex: 0
+    setInverseViewMatrix: 0
+    requireDepthNormals: 0
+    srcType: 0
+    srcTextureId: _CameraColorTexture
+    dstType: 0
+    dstTextureId: _BlitPassTexture
+    overrideGraphicsFormat: 0
+    graphicsFormat: 48
+    filterMode: 1
+    downSample: 1
+--- !u!114 &8082592574343285873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a820890250d764a870938719a2be22, type: 3}
+  m_Name: DepthCookieObject
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    Event: 400
+    filterSettings:
+      RenderObjectType: 0
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 2147483647
+      PassNames:
+      - DepthCookie
+    filterMode: 0
+    limitQueueRange: {x: 0, y: 5000}
+    dstType: 1
+    dstName: _DepthCookieObject
+    dstFormat: 2
+    writeDefaultDepth: 1
+    downSample: 1
+    sceneViewOnly: 0
+    gameViewOnly: 0
+--- !u!114 &9014217560336422004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8685c272233674a8b3f2b8c88fd419, type: 3}
+  m_Name: TreeverseUniversalRenderFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  toonSettings:
+    blitMaterial: {fileID: 2100000, guid: 25b2813dde8f3284097202450a9220bd, type: 2}
+    downSample: 1
+    toonBufferPassName: ToonPostProcessing
+    contrast: 1
+  psotSettings:
+    Event: 500
+    blitMaterial: {fileID: 2100000, guid: 25b2813dde8f3284097202450a9220bd, type: 2}
+    blitMaterialPassIndex: 0
+    setInverseViewMatrix: 0
+    requireDepthNormals: 0
+    srcType: 0
+    srcTextureId: _CameraColorTexture
+    dstType: 0
+    dstTextureId: _BlitPassTexture
+    overrideGraphicsFormat: 0
+    graphicsFormat: 0
+    filterMode: 1
+    downSample: 1
+  toonBuffSettings:
+    Event: 500
+    filterSettings:
+      RenderObjectType: 2
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 4294967295
+      PassNames:
+      - ToonPostProcessing
+    filterMode: 0
+    limitQueueRange: {x: 0, y: 5000}
+    dstType: 1
+    dstName: _ToonPPSBuffer
+    dstFormat: 2
+    writeDefaultDepth: 1
+    downSample: 1
+    sceneViewOnly: 0
+    gameViewOnly: 0
+--- !u!114 &9036321208306770855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804bf49869d3b4315a850958d8530433, type: 3}
+  m_Name: KawaseBlur
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    Event: 600
+    blitMaterial: {fileID: 2100000, guid: 3de81271bb7ab1b47864daeda456d931, type: 2}
+    blitMaterialPassIndex: 0
+    setInverseViewMatrix: 0
+    requireDepthNormals: 0
+    srcType: 0
+    srcTextureId: _CameraColorTexture
+    dstType: 1
+    dstTextureId: _BlurBackgroundBufffer
+    overrideGraphicsFormat: 0
+    graphicsFormat: 48
+    filterMode: 1
+    downSample: 4

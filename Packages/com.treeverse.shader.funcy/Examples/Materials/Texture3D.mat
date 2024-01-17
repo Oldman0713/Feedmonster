@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!28 &-8222242446939077520
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: z__ShadingGradientTextureTex{"mode":0,"colorKeys":[{"color":{"r":0.34478461742401125,"g":0.37908607721328738,"b":0.4905660152435303,"a":1.0},"time":0.0},{"color":{"r":0.6374599933624268,"g":0.6553892493247986,"b":0.7075471878051758,"a":1.0},"time":0.3604181110858917},{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 2
+  m_Width: 256
+  m_Height: 1
+  m_CompleteImageSize: 1024
+  m_MipsStripped: 0
+  m_TextureFormat: 5
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 1024
+  _typelessdata: ff58617dff59617eff5a627eff5a637fff5b6480ff5c6580ff5d6581ff5e6681ff5e6782ff5f6883ff606883ff616984ff626a84ff626b85ff636b86ff646c86ff656d87ff666e87ff676e88ff676f89ff687089ff69718aff6a728aff6b728bff6b738cff6c748cff6d758dff6e758dff6f768eff6f778fff70788fff717890ff727990ff737a91ff747b92ff747b92ff757c93ff767d93ff777e94ff787f95ff787f95ff798096ff7a8196ff7b8297ff7c8298ff7c8398ff7d8499ff7e8599ff7f859aff80869bff81879bff81889cff82899cff83899dff848a9eff858b9eff858c9fff868c9fff878da0ff888ea1ff898fa1ff898fa2ff8a90a2ff8b91a3ff8c92a4ff8d92a4ff8e93a5ff8e94a5ff8f95a6ff9096a7ff9196a7ff9297a8ff9298a8ff9399a9ff9499aaff959aaaff969babff969cabff979cacff989dadff999eadff9a9faeff9ba0aeff9ba0afff9ca1b0ff9da2b0ff9ea3b1ff9fa3b1ff9fa4b2ffa0a5b3ffa1a6b3ffa2a6b4ffa3a7b4ffa3a8b5ffa4a8b5ffa4a9b6ffa5a9b6ffa5aab7ffa6aab7ffa7abb8ffa7abb8ffa8acb9ffa8adb9ffa9adb9ffa9aebaffaaaebaffabafbbffabafbbffacb0bcffacb0bcffadb1bdffadb1bdffaeb2beffafb2beffafb3bfffb0b4bfffb0b4bfffb1b5c0ffb1b5c0ffb2b6c1ffb2b6c1ffb3b7c2ffb4b7c2ffb4b8c3ffb5b8c3ffb5b9c4ffb6b9c4ffb6bac4ffb7bbc5ffb8bbc5ffb8bcc6ffb9bcc6ffb9bdc7ffbabdc7ffbabec8ffbbbec8ffbcbfc9ffbcbfc9ffbdc0caffbdc0caffbec1caffbec2cbffbfc2cbffc0c3ccffc0c3ccffc1c4cdffc1c4cdffc2c5ceffc2c5ceffc3c6cfffc3c6cfffc4c7cfffc5c8d0ffc5c8d0ffc6c9d1ffc6c9d1ffc7cad2ffc7cad2ffc8cbd3ffc9cbd3ffc9ccd4ffcaccd4ffcacdd4ffcbcdd5ffcbced5ffcccfd6ffcdcfd6ffcdd0d7ffced0d7ffced1d8ffcfd1d8ffcfd2d9ffd0d2d9ffd1d3daffd1d3daffd2d4daffd2d4dbffd3d5dbffd3d6dcffd4d6dcffd4d7ddffd5d7ddffd6d8deffd6d8deffd7d9dfffd7d9dfffd8dadfffd8dae0ffd9dbe0ffdadbe1ffdadce1ffdbdde2ffdbdde2ffdcdee3ffdcdee3ffdddfe4ffdedfe4ffdee0e4ffdfe0e5ffdfe1e5ffe0e1e6ffe0e2e6ffe1e2e7ffe2e3e7ffe2e4e8ffe3e4e8ffe3e5e9ffe4e5e9ffe4e6eaffe5e6eaffe5e7eaffe6e7ebffe7e8ebffe7e8ecffe8e9ecffe8e9edffe9eaedffe9ebeeffeaebeeffebecefffebecefffecedefffecedf0ffedeef0ffedeef1ffeeeff1ffefeff2ffeff0f2fff0f0f3fff0f1f3fff1f2f4fff1f2f4fff2f3f4fff3f3f5fff3f4f5fff4f4f6fff4f5f6fff5f5f7fff5f6f7fff6f6f8fff6f7f8fff7f7f9fff8f8f9fff8f9fafff9f9fafff9fafafffafafbfffafbfbfffbfbfcfffcfcfcfffcfcfdfffdfdfdfffdfdfefffefefefffefeffffffffff
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Texture3D
+  m_Shader: {fileID: 4800000, guid: ba87f85af76a6d442b552f1b8edb1768, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 5000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _ShadingGradientTexture:
+        m_Texture: {fileID: -8222242446939077520}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Voume:
+        m_Texture: {fileID: 11700000, guid: e0588dabcbc0aba459a82eb839636da7, type: 3}
+        m_Scale: {x: 3, y: 3}
+        m_Offset: {x: 0.99, y: 0.83}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _DarknessThreshold: 0.19
+    - _DensityScale: 1
+    - _FlowAngle: 0
+    - _FlowSpeed: 0
+    - _HeightDetensity: 1
+    - _LightAbsorb: 2.03
+    - _LightSteSize: 0.02
+    - _NumLightSteps: 8
+    - _NumSteps: 16
+    - _QueueControl: 1
+    - _QueueOffset: 0
+    - _StepSize: 11.9
+    - _TessEdgeLength: 16
+    - _TessMax: 25
+    - _TessMaxDisp: 25
+    - _TessMin: 10
+    - _TessPhongStrength: 0.5
+    - _TessValue: 16
+    - _Transmittance: 1
+    - _VoxelDensity: 16
+    m_Colors:
+    - _Color: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 0.050980393}
+    - _Color0: {r: 0, g: 0.2476463, b: 0.33962262, a: 0}
+    - _Color1: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _LightingSOP: {r: 1, g: 0, b: 1, a: 0}
+    - _Offset: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Sphere: {r: 0, g: 0, b: 0, a: 0.4}
+    - _Vector0: {r: 1, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
