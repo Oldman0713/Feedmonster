@@ -18,6 +18,6 @@ public class Tur1 : MonoBehaviour
     public void Walk()
     {
         Debug.Log("Walk");
-        Anim.SetFloat("base Layer_Work" 0, 1);
+        
     }
 }
