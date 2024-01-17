@@ -3,11 +3,11 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;
-    public float minDistance = 2.0f; // ³Ì¤p¶ZÂ÷
-    public float maxDistance = 10.0f; // ³Ì¤j¶ZÂ÷
-    public float heightRatio = 0.5f; // °ª«×¤ñ¨Ò
-    public float horizontalSpeed = 2.0f; // ¤ô¥­±ÛÂà³t«×
-    public float zoomSpeed = 2.0f; // ÁY©ñ³t«×
+    public float minDistance = 2.0f; // ï¿½Ì¤pï¿½Zï¿½ï¿½
+    public float maxDistance = 10.0f; // ï¿½Ì¤jï¿½Zï¿½ï¿½
+    public float heightRatio = 0.5f; // ï¿½ï¿½ï¿½×¤ï¿½ï¿½
+    public float horizontalSpeed = 2.0f; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½tï¿½ï¿½
+    public float zoomSpeed = 2.0f; // ï¿½Yï¿½ï¿½tï¿½ï¿½
 
     private float currentAngle = 0.0f;
     private float currentDistance;
@@ -15,7 +15,21 @@ public class CameraFollow : MonoBehaviour
     private void Start()
     {
         currentDistance = (minDistance + maxDistance) / 2;
+
+        SetInitialCameraPosition();// åˆå§‹ä½ç½®å’Œæœå‘è¨­ç½®
+
     }
+
+private void SetInitialCameraPosition()
+{
+    float heightAdjustment = heightRatio * currentDistance;
+    Vector3 direction = new Vector3(0, heightAdjustment, -currentDistance);
+    Quaternion rotation = Quaternion.Euler(0, currentAngle, 0);
+    transform.position = target.position + rotation * direction;
+
+    Vector3 lookDirection = target.position - transform.position;
+    transform.rotation = Quaternion.LookRotation(lookDirection);
+}
 
     private void Update()
     {
