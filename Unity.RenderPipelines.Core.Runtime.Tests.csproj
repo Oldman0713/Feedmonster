@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F0BE9155-3A11-EBA4-00C9-037ECBE7983F}</ProjectGuid>
+    <ProjectGuid>{4D5DF940-064E-7C6E-6072-72D3069560A4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.RenderPipelines.Core.Runtime.Tests</AssemblyName>
@@ -692,7 +692,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{6A946C91-ED98-5986-81EE-9226F30113B0}</Project>
+      <Project>{0E7AB43B-F954-6006-D300-A90786738F51}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
   </ItemGroup>

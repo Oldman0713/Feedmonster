@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>Treeverse.Shader.Editor</RootNamespace>
-    <ProjectGuid>{261CD472-57A1-97CA-9763-E5C90FC9532F}</ProjectGuid>
+    <ProjectGuid>{69A224C4-F1C8-332F-4FC7-8313B6301DB9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Treeverse.Shader.Editor</AssemblyName>
@@ -783,19 +783,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{6A946C91-ED98-5986-81EE-9226F30113B0}</Project>
+      <Project>{0E7AB43B-F954-6006-D300-A90786738F51}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
-      <Project>{F1AA3925-4092-5D01-A29F-666E0577E68F}</Project>
+      <Project>{F19CAB54-3407-BCB0-63B2-17C468E84CF0}</Project>
       <Name>Unity.RenderPipelines.Core.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Treeverse.Shader.ScriptExtenstion.csproj">
-      <Project>{E0253B08-B8FF-E26A-04E8-BEA01BEF2B92}</Project>
+      <Project>{1A4A377C-75E0-B83E-9DB9-19B64E309BBC}</Project>
       <Name>Treeverse.Shader.ScriptExtenstion</Name>
     </ProjectReference>
     <ProjectReference Include="Treeverse.Shader.Runtime.csproj">
-      <Project>{C5CAF50E-B307-C449-485C-D822D6A98908}</Project>
+      <Project>{B710510B-082B-F5F5-EB0B-755374F5035E}</Project>
       <Name>Treeverse.Shader.Runtime</Name>
     </ProjectReference>
   </ItemGroup>

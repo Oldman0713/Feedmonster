@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F1AA3925-4092-5D01-A29F-666E0577E68F}</ProjectGuid>
+    <ProjectGuid>{F19CAB54-3407-BCB0-63B2-17C468E84CF0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.RenderPipelines.Core.Editor</AssemblyName>
@@ -889,7 +889,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{6A946C91-ED98-5986-81EE-9226F30113B0}</Project>
+      <Project>{0E7AB43B-F954-6006-D300-A90786738F51}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
   </ItemGroup>

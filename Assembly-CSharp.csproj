@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{21077CBF-3792-9598-2355-D85FB0819AF2}</ProjectGuid>
+    <ProjectGuid>{3F8B5438-7264-6897-BADD-4E71D9E095F4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -909,47 +909,47 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
-      <Project>{AC762BB2-893A-4F7C-2570-61EC82FD210C}</Project>
+      <Project>{6FD4E61B-5BF5-13DE-DFEB-8D995C0AB570}</Project>
       <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="Treeverse.Shader.Editor.ShaderGUI.csproj">
-      <Project>{4DB6982E-CFF7-4128-2624-51E114299B46}</Project>
+      <Project>{28CFFE73-3E53-5878-21B4-91106B38AC23}</Project>
       <Name>Treeverse.Shader.Editor.ShaderGUI</Name>
     </ProjectReference>
     <ProjectReference Include="Treeverse.Shader.ScriptExtenstion.csproj">
-      <Project>{E0253B08-B8FF-E26A-04E8-BEA01BEF2B92}</Project>
+      <Project>{1A4A377C-75E0-B83E-9DB9-19B64E309BBC}</Project>
       <Name>Treeverse.Shader.ScriptExtenstion</Name>
     </ProjectReference>
     <ProjectReference Include="Treeverse.Shader.Editor.csproj">
-      <Project>{261CD472-57A1-97CA-9763-E5C90FC9532F}</Project>
+      <Project>{69A224C4-F1C8-332F-4FC7-8313B6301DB9}</Project>
       <Name>Treeverse.Shader.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="MagicaClothV2.Editor.csproj">
-      <Project>{980A7761-2D70-67C9-DC85-AB712111D07E}</Project>
+      <Project>{C4A55B0F-08E5-6A0D-4867-79FEFD83C8C9}</Project>
       <Name>MagicaClothV2.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{6A946C91-ED98-5986-81EE-9226F30113B0}</Project>
+      <Project>{0E7AB43B-F954-6006-D300-A90786738F51}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Treeverse.Shader.Runtime.csproj">
-      <Project>{C5CAF50E-B307-C449-485C-D822D6A98908}</Project>
+      <Project>{B710510B-082B-F5F5-EB0B-755374F5035E}</Project>
       <Name>Treeverse.Shader.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Polybrush.Editor.csproj">
-      <Project>{4145F978-DE77-B715-1DA3-7584F08B1480}</Project>
+      <Project>{41716B36-2FDC-8528-CB2C-165595A2ED26}</Project>
       <Name>Unity.Polybrush.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Polybrush.csproj">
-      <Project>{C0B68F39-43D0-6774-FB2C-2E6EDEB98EBD}</Project>
+      <Project>{804AF56E-D576-A584-8FF6-406BCA539694}</Project>
       <Name>Unity.Polybrush</Name>
     </ProjectReference>
     <ProjectReference Include="MagicaClothV2.csproj">
-      <Project>{58ACF963-FED1-9A84-5BF6-58266B5087AF}</Project>
+      <Project>{C7F7FF70-3423-A7D4-FAEA-0EF53E5C2C36}</Project>
       <Name>MagicaClothV2</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
-      <Project>{F1AA3925-4092-5D01-A29F-666E0577E68F}</Project>
+      <Project>{F19CAB54-3407-BCB0-63B2-17C468E84CF0}</Project>
       <Name>Unity.RenderPipelines.Core.Editor</Name>
     </ProjectReference>
   </ItemGroup>

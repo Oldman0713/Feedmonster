@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{58ACF963-FED1-9A84-5BF6-58266B5087AF}</ProjectGuid>
+    <ProjectGuid>{C7F7FF70-3423-A7D4-FAEA-0EF53E5C2C36}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>MagicaClothV2</AssemblyName>

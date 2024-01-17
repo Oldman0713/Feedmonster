@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C0B68F39-43D0-6774-FB2C-2E6EDEB98EBD}</ProjectGuid>
+    <ProjectGuid>{804AF56E-D576-A584-8FF6-406BCA539694}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Polybrush</AssemblyName>

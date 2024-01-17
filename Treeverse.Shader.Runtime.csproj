@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C5CAF50E-B307-C449-485C-D822D6A98908}</ProjectGuid>
+    <ProjectGuid>{B710510B-082B-F5F5-EB0B-755374F5035E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Treeverse.Shader.Runtime</AssemblyName>
@@ -778,19 +778,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{6A946C91-ED98-5986-81EE-9226F30113B0}</Project>
+      <Project>{0E7AB43B-F954-6006-D300-A90786738F51}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Treeverse.Shader.ScriptExtenstion.csproj">
-      <Project>{E0253B08-B8FF-E26A-04E8-BEA01BEF2B92}</Project>
+      <Project>{1A4A377C-75E0-B83E-9DB9-19B64E309BBC}</Project>
       <Name>Treeverse.Shader.ScriptExtenstion</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Polybrush.csproj">
-      <Project>{C0B68F39-43D0-6774-FB2C-2E6EDEB98EBD}</Project>
+      <Project>{804AF56E-D576-A584-8FF6-406BCA539694}</Project>
       <Name>Unity.Polybrush</Name>
     </ProjectReference>
     <ProjectReference Include="Treeverse.Shader.Editor.ShaderGUI.csproj">
-      <Project>{4DB6982E-CFF7-4128-2624-51E114299B46}</Project>
+      <Project>{28CFFE73-3E53-5878-21B4-91106B38AC23}</Project>
       <Name>Treeverse.Shader.Editor.ShaderGUI</Name>
     </ProjectReference>
   </ItemGroup>

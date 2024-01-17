@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E0253B08-B8FF-E26A-04E8-BEA01BEF2B92}</ProjectGuid>
+    <ProjectGuid>{1A4A377C-75E0-B83E-9DB9-19B64E309BBC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Treeverse.Shader.ScriptExtenstion</AssemblyName>

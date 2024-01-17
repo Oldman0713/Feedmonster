@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6A946C91-ED98-5986-81EE-9226F30113B0}</ProjectGuid>
+    <ProjectGuid>{0E7AB43B-F954-6006-D300-A90786738F51}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.RenderPipelines.Core.Runtime</AssemblyName>

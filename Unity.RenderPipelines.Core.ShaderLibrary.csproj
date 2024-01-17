@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{AC762BB2-893A-4F7C-2570-61EC82FD210C}</ProjectGuid>
+    <ProjectGuid>{6FD4E61B-5BF5-13DE-DFEB-8D995C0AB570}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.RenderPipelines.Core.ShaderLibrary</AssemblyName>

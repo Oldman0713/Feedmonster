@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{980A7761-2D70-67C9-DC85-AB712111D07E}</ProjectGuid>
+    <ProjectGuid>{C4A55B0F-08E5-6A0D-4867-79FEFD83C8C9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>MagicaClothV2.Editor</AssemblyName>
@@ -787,7 +787,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="MagicaClothV2.csproj">
-      <Project>{58ACF963-FED1-9A84-5BF6-58266B5087AF}</Project>
+      <Project>{C7F7FF70-3423-A7D4-FAEA-0EF53E5C2C36}</Project>
       <Name>MagicaClothV2</Name>
     </ProjectReference>
   </ItemGroup>

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>Treeverse.Shader.Editor.ShaderGUI</RootNamespace>
-    <ProjectGuid>{4DB6982E-CFF7-4128-2624-51E114299B46}</ProjectGuid>
+    <ProjectGuid>{28CFFE73-3E53-5878-21B4-91106B38AC23}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Treeverse.Shader.Editor.ShaderGUI</AssemblyName>

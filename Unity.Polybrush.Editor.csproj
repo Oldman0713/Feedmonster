@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4145F978-DE77-B715-1DA3-7584F08B1480}</ProjectGuid>
+    <ProjectGuid>{41716B36-2FDC-8528-CB2C-165595A2ED26}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Polybrush.Editor</AssemblyName>
@@ -820,11 +820,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Polybrush.csproj">
-      <Project>{C0B68F39-43D0-6774-FB2C-2E6EDEB98EBD}</Project>
+      <Project>{804AF56E-D576-A584-8FF6-406BCA539694}</Project>
       <Name>Unity.Polybrush</Name>
     </ProjectReference>
     <ProjectReference Include="Treeverse.Shader.Runtime.csproj">
-      <Project>{C5CAF50E-B307-C449-485C-D822D6A98908}</Project>
+      <Project>{B710510B-082B-F5F5-EB0B-755374F5035E}</Project>
       <Name>Treeverse.Shader.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
