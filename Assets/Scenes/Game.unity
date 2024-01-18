@@ -703,8 +703,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveRadius: 10
-  minWaitTime: 0
-  maxWaitTime: 3
+  minWaitTime: 2
+  maxWaitTime: 5
+  transitionSpeed: 10
   animator: {fileID: 1054010409}
 --- !u!195 &2052413703
 NavMeshAgent:

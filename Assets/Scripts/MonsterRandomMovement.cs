@@ -6,6 +6,7 @@ public class MonsterRandomMovement : MonoBehaviour
     public float moveRadius = 10f; // 怪物移動的最大半徑範圍
     public float minWaitTime = 2f; // 最小等待時間
     public float maxWaitTime = 5f; // 最大等待時間
+    public float transitionSpeed = 1f; // 漸變速度
     public Animator animator; // Animator組件
 
     private NavMeshAgent agent;
@@ -15,7 +16,8 @@ public class MonsterRandomMovement : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        SetNewWaitTime(); // 設定新的等待時間
+        SetNewDestinationAndWaitTime();
+        timer = 1.0f; // 初始等待1秒
     }
 
     void Update()
@@ -24,41 +26,27 @@ public class MonsterRandomMovement : MonoBehaviour
 
         if (timer >= waitTime)
         {
-            MoveToNewRandomPosition();
+            SetNewDestinationAndWaitTime();
         }
 
-        // 檢查是否正在移動
-        if (!agent.pathPending && agent.remainingDistance < 0.5f)
-        {
-            if (animator != null)
-            {
-                animator.SetFloat("MonsterMoveSpeed", 0f); // 停止移動動畫
-            }
-            if (timer >= waitTime)
-            {
-                SetNewWaitTime(); // 再次設定新的等待時間
-            }
-        }
-        else
-        {
-            if (animator != null)
-            {
-                animator.SetFloat("MonsterMoveSpeed", 1f); // 開始移動動畫
-            }
-        }
+        // 更新Animator參數
+        UpdateMovementSpeed();
     }
 
-    void MoveToNewRandomPosition()
+    void SetNewDestinationAndWaitTime()
     {
-        Vector3 newDestination = RandomNavSphere(transform.position, moveRadius);
-        agent.SetDestination(newDestination);
+        agent.SetDestination(RandomNavSphere(transform.position, moveRadius));
 
+        waitTime = Random.Range(minWaitTime, maxWaitTime);
         timer = 0; // 重置計時器
     }
 
-    void SetNewWaitTime()
+    void UpdateMovementSpeed()
     {
-        waitTime = Random.Range(minWaitTime, maxWaitTime); // 在最小和最大時間間隨機選擇
+        float targetSpeed = (agent.remainingDistance > agent.stoppingDistance) ? 1.0f : 0.0f;
+        float currentSpeed = animator.GetFloat("MonsterMoveSpeed");
+        float newSpeed = Mathf.Lerp(currentSpeed, targetSpeed, transitionSpeed * Time.deltaTime);
+        animator.SetFloat("MonsterMoveSpeed", newSpeed);
     }
 
     Vector3 RandomNavSphere(Vector3 origin, float distance)
