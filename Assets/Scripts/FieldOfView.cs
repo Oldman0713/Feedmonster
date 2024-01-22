@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using MyGameNamespace;
 
 public class FieldOfView : MonoBehaviour
 {
@@ -10,10 +11,18 @@ public class FieldOfView : MonoBehaviour
     public LayerMask targetMask;
     public LayerMask obstacleMask;
 
+    // 在Unity编辑器中将Food ScriptableObject分配给这个字段
+    public Food foodScriptableObject;
+
     private HashSet<Transform> detectedTargets = new HashSet<Transform>();
+
+    // 委托和事件，用于通知发现食物
+    public delegate void OnFoodDetected(Food food);
+    public event OnFoodDetected onFoodDetected;
 
     void FindVisibleTargets()
     {
+        detectedTargets.Clear();  // 清除上一次检测的目标
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
 
         for (int i = 0; i < targetsInViewRadius.Length; i++)
@@ -27,9 +36,10 @@ public class FieldOfView : MonoBehaviour
 
                 if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask))
                 {
-                    if (detectedTargets.Add(target)) // �p�G�ؼЩ|���Q�����L�A�h�K�[�춰�X����ܤ@��
+                    if (detectedTargets.Add(target)) // 如果目标尚未被检测过，则添加到集合并显示一次
                     {
-                        Debug.Log(target.name + " is visible!");
+                        // 使用分配给字段的ScriptableObject
+                        onFoodDetected?.Invoke(foodScriptableObject);
                     }
                 }
             }

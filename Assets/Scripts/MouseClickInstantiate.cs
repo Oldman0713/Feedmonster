@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class MouseClickInstantiate : MonoBehaviour
 {
-    public GameObject objectToInstantiate; // «ü©w­n¹ê¨Ò¤ÆªºGameObject
-    public LayerMask layerMask; // ¥Î©ó­­¨îRaycast¥i¥H¸I¼²ªº¼h
+    public GameObject objectToInstantiate; // ï¿½ï¿½ï¿½wï¿½nï¿½ï¿½Ò¤Æªï¿½GameObject
+    public LayerMask layerMask; // ï¿½Î©ó­­¨ï¿½Raycastï¿½iï¿½Hï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½h
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // ÀË¬d¬O§_«ö¤U¤F·Æ¹«¥ªÁä
+        if (Input.GetMouseButtonDown(0)) // ï¿½Ë¬dï¿½Oï¿½_ï¿½ï¿½ï¿½Uï¿½Fï¿½Æ¹ï¿½ï¿½ï¿½ï¿½ï¿½
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
